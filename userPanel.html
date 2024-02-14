@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/stylePanel.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <object type="image/svg+xml" data="./png/truck.svg" width="20" height="20">
+                Your browser does not support SVG
+            </object>
+            <span class="logo">SpaceY</span>
+            <object type="image/svg+xml" data="./png/rocket.svg" width="20" height="20">
+                Your browser does not support SVG
+            </object>
+            <a href="./userPanel.html" class="username" id="usernameLabel">username</a>
+            <script src="./js/front/panel.js"></script>
+        </a>
+    </header>
+    <div id="infoBanner"></div>
+    <div id="reservationModal">
+        <p>Notice</p>
+        <p>Each user can only reserve one seat, and the reservation can only last 15 minutes, 
+            after which the seat will be released. 
+        </p>
+        <button id="reserveConfirmButton">Confirm</button>
+        <button id="reserveCancelButton">Cancel</button>
+    </div>
+    <section id="section1">
+        <h1>Online Devices</h1>
+        <ul id="deviceList"></ul>
+        <button id="updateButton">Update Device IDs</button>
+
+        <script src="./globalConfigFront.js"></script>
+        <script src="./js/front/deviceStatusUpdate.js"></script>
+        <script src="./js/front/contextMenu.js"></script>
+        <script src="./js/front/UpdateDeviceID&DeviceBlock.js" defer></script>
+    </section>
+    <div class="sectionsDiv" id="sectionsDiv">
+            <!-- Blocks will be dynamically added here -->
+    </div>
+        
+
+</body>
+</html>

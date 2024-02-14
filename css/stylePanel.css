@@ -1,0 +1,264 @@
+body {
+    font-family: Georgia, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #F3F4F6;
+    height: 60px;
+  }
+
+  header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin-right: 40px;
+  }
+  
+  header a span {
+    margin-left: 8px;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo{
+    margin-right: 10px;
+   }
+  .logo:hover{
+    text-decoration: underline;
+  }
+
+  .username{
+    margin-left: auto;
+    margin: 0;
+  }
+  .username:hover{
+    text-decoration: underline;
+  }
+
+  .changeDeviceName{
+    margin-left: auto;
+  }
+
+  .changeDeviceName:hover{
+    margin-left: auto;
+    text-decoration: underline;
+  }
+
+  #deviceList {
+    list-style-type: none;
+  }
+
+  .section {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Box shadow style */
+    flex-direction: row;
+    justify-content: space-between; /* Evenly distribute items horizontally */
+    align-items: center; /* Center items vertically */
+    height: 80vh;
+    font-size: 30px;
+  }
+  
+  #section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Box shadow style */
+    height: 80vh;
+    font-size: 30px;
+    /* background: linear-gradient(to right, rgb(0, 210, 255), rgb(58, 123, 213)); */
+    background-image: url(../png/liutijianbian71.jpg);
+  }
+
+  .section:nth-child(even) {
+    background: linear-gradient(to bottom right, rgb(89, 193, 115), rgb(161, 127, 224), rgb(93, 38, 193));
+  }
+
+  .section:nth-child(odd) {
+    background: linear-gradient(to bottom right, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89));
+  }
+
+.device-block {
+  flex: 0 0 calc(18% - 20px);
+  height: 30vh;
+  max-width: calc(18% - 20px);
+  box-sizing: border-box;
+  border: 5px solid #000;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 5px;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: space-between;; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 2); /* Box shadow style */
+  background-color: #91583b;
+
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Text color for better contrast */
+}
+
+.deviceName {
+  margin-top: auto;
+}
+
+.humDiv {
+  margin-bottom: auto;
+}
+
+.circleButton {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%; 
+  position: absolute;
+  border: 3px solid #000;
+}
+
+.circleButton:nth-child(1) {
+  top: 10px;
+  left: 10px;
+}
+
+.circleButton:nth-child(2) {
+  top: 10px;
+  right: 10px;
+}
+
+.circleButton:nth-child(3) {
+  bottom: 10px;
+  left: 10px;
+}
+
+.circleButton:nth-child(4) {
+  bottom: 10px;
+  right: 10px;
+}
+
+.circleButton:hover {
+  border: 3.5px solid #000;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+}
+
+#deviceList li {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.custom-context-menu {
+  border-radius: 10%;
+  overflow: hidden;
+  padding: 0%;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.custom-context-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-context-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  list-style-type: none;  
+}
+
+.custom-context-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+.device-name-form {
+  border-radius: 8px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  z-index: 1000; 
+  width: 300px;
+}
+
+#deviceName {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#infoBanner {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffcc00;
+  color: #333;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+}
+
+#reservationModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+#reserveCancelButton {
+  background-color: red;
+}

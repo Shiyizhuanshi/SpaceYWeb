@@ -1,0 +1,144 @@
+body {
+    font-family: Georgia, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #F3F4F6;
+    height: 60px;
+  }
+
+  header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin-right: 40px;
+
+  }
+  header a:hover{
+    text-decoration: underline;
+  }
+
+  header a span {
+    margin-left: 8px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  header div {
+    display: flex;
+    gap: 4px;
+  }
+
+  header a, header button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #F3F4F6;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 15px;
+  }
+  header a.login {
+    border: 1px solid #333; /* 为登录按钮添加边框样式 */
+    transition: background-color 0.2s;
+  }
+
+  header a.login:hover{
+    background-color: #282F3C; /* 为登录按钮添加边框样式 */
+    color: #fff;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    height: 60vh;
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow style */
+  }
+
+  .section:nth-child(odd) {
+    background-color: #fff;
+  }
+
+  .section:nth-child(even) {
+    background-color: #F3F4F6;
+  }
+
+  .section h2,.section p {
+    margin: 0;
+    }
+
+  .section .button-container {
+  display: flex;
+  justify-content: center; /* Align buttons horizontally at the center */
+  margin-top: 10px; /* Adjust as needed for spacing */
+  }
+
+  .section .button-container {
+    display: flex;
+    justify-content: center; /* Align buttons horizontally at the center */
+    margin-top: 10px; /* Adjust as needed for spacing */
+  }
+
+  .section .button-container button {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow style */
+    padding: 8px 16px;
+    margin: 0 10px; /* Adjust margin between buttons */
+    border: none;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: .3s all;
+  }
+  .section .button-container .button1 {
+    background-color: #111827; /* Green for Button 1 */
+    color: white;
+  }
+  
+  .section .button-container .button1:hover {
+    background-color:  #282F3C; /* Darker green for Button 1 on hover */
+  }
+  
+  .section .button-container .button2 {
+    border: 1px solid #000;
+    background-color:#FFFFFF; /* Blue for Button 2 */
+    color: black;
+  }
+  
+  .section .button-container .button2:hover {
+    background: hsl(from var(--bg) h s calc(l * 0.9));
+    --bg: #F3F4F6;
+  }
+
+  video {
+    width: 80%; /* Make the video fill its container width */
+    height: 80%; /* Make the video fill its container height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+  }
+
+  footer {
+    border-top: 1px solid grey;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    padding: 10px;
+    background-color: #F3F4F6;
+    height: 60px;
+  }
