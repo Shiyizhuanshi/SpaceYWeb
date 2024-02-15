@@ -21,7 +21,7 @@ def fetch_ip_and_port_from_firebase(database_url, path):
             # ip = data.get('IP')
             # port = data.get(data.get('port'))
             # print(ip, port)
-            return f"{data.get('backendIP')}:{data.get('backEndPort')}"
+            return f"{data.get('backendIP')}:{data.get('backendPort')}"
         else:
             print(f"Failed to fetch data. Status code: {response.status_code}")
             return None
@@ -61,7 +61,10 @@ def randomDevicesWithStatus(num):
             "deviceIP": random.randint(100,200),
             "devicePort": random.randint(3000,4000),}
         send_message(payload1, api_register_url)
-        time.sleep(0.1)
+        if(n==3):
+            time.sleep(5)
+        else:
+            time.sleep(0.1)
         for i in range(deviceSeatNum):
             payload2={"deviceID": "IC" + str(n+1),  
                  "buttonID": i+1,

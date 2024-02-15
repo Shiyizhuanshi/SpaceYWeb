@@ -87,7 +87,7 @@ async function register(deviceID, deviceOwner, deviceName, deviceSeatNum) {
   const path = `devices/${deviceID}.json`;
   try {
       // Update data with new values
-      const updateResponse = await fetch(db + path, {
+      const updateResponse = await fetch(config.db + path, {
           method: 'PUT',
           headers: {
               'Content-Type': 'application/json',
@@ -111,8 +111,8 @@ async function changeDeviceName() {
   const deviceName = document.getElementById('deviceName').value;
   try {
       // Fetch the existing device data
-      console.log(db + `devices/${deviceID}.json`);
-      const response = await fetch(db + `devices/${deviceID}.json`);
+      console.log(config.db + `devices/${deviceID}.json`);
+      const response = await fetch(config.db + `devices/${deviceID}.json`);
       if (!response.ok) {
           console.log('Failed to fetch existing device data.');
       }
@@ -126,7 +126,7 @@ async function changeDeviceName() {
       await register(deviceID, deviceOwner, deviceName, deviceSeatNum);
 
       // Fetch the updated device data
-      const updatedResponse = await fetch(db + `devices/${deviceID}.json`);
+      const updatedResponse = await fetch(config.db + `devices/${deviceID}.json`);
       if (!updatedResponse.ok) {
           console.log('Failed to fetch updated device data.');
       }

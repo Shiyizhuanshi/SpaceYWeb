@@ -1,4 +1,5 @@
-const data = {"backendIP":"192.168.43.167","backendPort":3000,"wsPort":4000}
+const data = 
+{"backendIP":"192.168.43.167","backendPort":3000,"wsPort":4000}
 ;
 
 const backEndIp = "http://"+data.backendIP;

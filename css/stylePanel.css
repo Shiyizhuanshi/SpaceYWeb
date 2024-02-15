@@ -257,6 +257,8 @@ button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1000;
   border-radius: 10px;
+  max-height: 40vh;
+  max-width: 20vw;
 }
 
 #reserveCancelButton {
