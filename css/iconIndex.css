@@ -18,19 +18,37 @@
 
 
 .sectionDiv.left4 .icon1 {
-    background: url("../png/时间.svg") no-repeat left center;
+    background: url("../png/安装.svg") no-repeat left center;
     background-size: 40px 40px; /* Set the size of the SVG icon */
     padding-left: 50px; /* Adjust the padding to create space for the SVG */
 }
 
 .sectionDiv.left4 .icon2 {
-    background: url("../png/首页.svg") no-repeat left center;
+    background: url("../png/指南针.svg") no-repeat left center;
     background-size: 40px 40px; /* Set the size of the SVG icon */
     padding-left: 50px; /* Adjust the padding to create space for the SVG */
 }
 
 .sectionDiv.left4 .icon3 {
-    background: url("../png/数据.svg") no-repeat left center;
+    background: url("../png/网站开发.svg") no-repeat left center;
+    background-size: 40px 40px; /* Set the size of the SVG icon */
+    padding-left: 50px; /* Adjust the padding to create space for the SVG */
+}
+
+.sectionDiv.right6 .icon1 {
+    background: url("../png/实时.svg") no-repeat left center;
+    background-size: 40px 40px; /* Set the size of the SVG icon */
+    padding-left: 50px; /* Adjust the padding to create space for the SVG */
+}
+
+.sectionDiv.right6 .icon2 {
+    background: url("../png/笑脸\ \(2\).svg") no-repeat left center;
+    background-size: 40px 40px; /* Set the size of the SVG icon */
+    padding-left: 50px; /* Adjust the padding to create space for the SVG */
+}
+
+.sectionDiv.right6 .icon3 {
+    background: url("../png/刷新\(1\).svg") no-repeat left center;
     background-size: 40px 40px; /* Set the size of the SVG icon */
     padding-left: 50px; /* Adjust the padding to create space for the SVG */
 }

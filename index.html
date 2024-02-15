@@ -28,29 +28,28 @@
         </div>
     </header>
     <div class="sectionsDiv">
-        <section class="section section1">
-            <h2>Welcome to SpaceY</h2>
+        <section class="section section1" id="title">
+            <h1 id="spacey">Welcome to SpaceY</h1>
             <p>Low-cost space management system</p>
             <div class="button-container">
-                <button class="button1">Get Started</button>
-                <button class="button2">Learn more</button>
+                <button class="button1" onclick="jumpToComponent('EasyAccess')">Get Started</button>
+                <button class="button2" onclick="jumpToComponent('Video')">Learn more</button>
               </div>
         </section>
         
-        <section class="section section2" id="About">
-            <h2>About section</h2>
-            <p>Video shows here</p>
+        <section class="section section2" id="Video">
             <video id="myVideo" src="./png/Screen Recording 2024-02-15 at 11.20.17.mov" controls></video>
         </section>
     
-        <section class="section_2 section3" id="Technology">
+        <section class="section_2 section3" id="EasyAccess">
             <div class="sectionDiv left3">
                 <img src="./png/seatReserveDemo.gif">
             </div>
             <div class="sectionDiv right3">
                 <h3>Easy Access to Empty Spaces</h3>
-                <p>In the SpaceY interface, you can easily track and monitor empty spaces within your facilities. 
-                    Track facility conditions, and aid your convenience.</p>
+                <p>In the SpaceY interface, effortlessly monitor and track vacant spaces within your facilities. 
+                    Keep a close eye on the conditions of your facilities, 
+                    providing a convenient solution for streamlined facility management and ensuring optimal usability.</p>
                 <p class="icon1">Find, and reserve empty spaces</p>
                 <p class="icon2">Anytime, from anywhere</p>
                 <p class="icon3">From our SpaceY webpage</p>
@@ -60,8 +59,8 @@
         <section class="section_2 section4" id="Pricing">
             <div class="sectionDiv left4">
                 <h3>Easy Set Up</h3>
-                <p>The SpaceY monitor interface auto generates space layout according your available devices in your facility. 
-                    Data is displayed seemlessly.</p>
+                <p>The SpaceY monitor interface automatically generates a spatial layout based on the devices available in your facility, 
+                    making the setup process effortless.</p>
                 <p class="icon1">Setup, and monitor your spaces</p>
                 <p class="icon2">Anytime, from anywhere</p>
                 <p class="icon3">From our SpaceY webpage</p>
@@ -70,6 +69,24 @@
                 <img src="./png/newDeviceDemo.gif">
             </div>
         </section>
+
+        
+        <section class="section_2 section6" id="Application">
+            <div class="sectionDiv left6">
+                <img src="./png/newDeviceDemo.gif">
+            </div>
+            <div class="sectionDiv right6">
+                <h3>Real-time Monitoring</h3>
+                <p>The SpaceY monitor interface excels in automating the continuous retrieval and update of sensor data and button status, 
+                    seamlessly presenting this information on the user interface in real-time. 
+                    The simultaneous display of sensor data and button status offers users a comprehensive view, 
+                    ensuring that the latest device information is effortlessly accessible. </p>
+                <p class="icon1">Real-time Awareness</p>
+                <p class="icon2">Enhanced User Experience</p>
+                <p class="icon3">No fresh needed</p>
+            </div>
+        </section>
+
 
         <section class="section section5" id="Application">
             <h2>Applications</h2>
@@ -89,7 +106,7 @@
             </div>
         </section>
 
-        <section class="section section6" id="Service">
+        <section class="section section7" id="Service">
             <h2>Service</h2>
             <p>Content for Service goes here.</p>
         </section>
@@ -101,6 +118,10 @@
     <footer>
         <p>&copy; 2024 SpaceY. All rights reserved.</p>
     </footer>
-
+    <script>
+        function jumpToComponent(id) {
+            document.getElementById(id).scrollIntoView({behavior: "smooth"});
+        }
+    </script>
 </body>
 </html>

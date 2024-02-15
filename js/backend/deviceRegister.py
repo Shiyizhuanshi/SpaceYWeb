@@ -29,7 +29,8 @@ def fetch_ip_and_port_from_firebase(database_url, path):
         print(f"Error during request: {e}")
         return None
 
-backendAPI = fetch_ip_and_port_from_firebase(database_url, path)
+# backendAPI = fetch_ip_and_port_from_firebase(database_url, path)
+backendAPI = "https://spacey-backend-7nqu.onrender.com:3000"
 api__status_url = "http://" + backendAPI + "/api/updateDeviceStatusToDatabase"
 api_register_url= "http://" + backendAPI + "/api/deviceRegister"
 api_sensor_url= "http://" + backendAPI + "/api/sensorData"
