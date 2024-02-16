@@ -22,6 +22,7 @@
         <div class="flex items-center gap-4">
             <a href="#EasyAccess">About</a>
             <a href="#Application">Application</a>
+            <a href="#Buy">Purchase Now</a>
             <a class="login" href="login.html">Login</a>
         </div>
     </header>
@@ -104,10 +105,17 @@
             </div>
         </section>
 
-        <section class="section section7" id="Service">
-            <h2>Service</h2>
-            <p>Content for Service goes here.</p>
+        <section class="section section7" id="Buy">
+            <h2>Purchase Now!</h2>
+            <button id="buy" onclick="openModal()">Order</button>
         </section>
+
+        <div id="reservationModal">
+            <h3>Sorry</h3>
+            <p>Sold Out!</p>
+            <button onclick="closeModal()">Ok</button>
+        </div>
+
     </div>
     
 
@@ -119,6 +127,12 @@
     <script>
         function jumpToComponent(id) {
             document.getElementById(id).scrollIntoView({behavior: "smooth"});
+        }
+        function openModal() {
+            document.getElementById("reservationModal").style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById("reservationModal").style.display = "none";
         }
     </script>
 </body>

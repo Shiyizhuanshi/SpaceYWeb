@@ -51,12 +51,30 @@ body {
     border-radius: 4px;
     font-size: 15px;
   }
+
   header a.login {
     border: 1px solid #333; 
     transition: background-color 0.2s;
   }
 
   header a.login:hover{
+    background-color: #282F3C; 
+    color: #fff;
+  }
+
+  #buy {
+    padding: 8px 12px;
+    border: none;
+    background-color: #F3F4F6;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 15px;
+    border: 1px solid #333; 
+    transition: background-color 0.2s;
+  }
+
+  #buy:hover{
     background-color: #282F3C; 
     color: #fff;
   }
@@ -301,6 +319,23 @@ body {
     object-fit: cover; /* Maintain aspect ratio and cover the entire container */
     object-position: center; /* Center the image both horizontally and vertically */
     border-radius: 10%; /* Use a fixed value for border-radius */
+}
+
+#reservationModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 120%;
+  height: 20vh;
+  width: 40vw;
 }
 
   footer {
