@@ -29,8 +29,8 @@ def fetch_ip_and_port_from_firebase(database_url, path):
         print(f"Error during request: {e}")
         return None
 
-# backendAPI = fetch_ip_and_port_from_firebase(database_url, path)
-backendAPI = "https://spacey-backend-7nqu.onrender.com:3000"
+backendAPI = fetch_ip_and_port_from_firebase(database_url, path)
+# backendAPI = "https://spacey-backend-7nqu.onrender.com:3000"
 api__status_url = "http://" + backendAPI + "/api/updateDeviceStatusToDatabase"
 api_register_url= "http://" + backendAPI + "/api/deviceRegister"
 api_sensor_url= "http://" + backendAPI + "/api/sensorData"
@@ -69,7 +69,7 @@ def randomDevicesWithStatus(num):
         for i in range(deviceSeatNum):
             payload2={"deviceID": "IC" + str(n+1),  
                  "buttonID": i+1,
-                 "buttonStatus": random.choice(["red", "lightgreen"]),
+                 "buttonStatus": "lightgreen",#random.choice(["red", "lightgreen"]),
                  "sensorTemp": random.randint(20,30),
                  "sensorHum": random.randint(40,60),}
             send_message(payload2, api__status_url)
@@ -84,10 +84,26 @@ def randomStatus(num):
         payload={
             "deviceID": "IC" + str(randomInt1),
             "buttonID": str(randomInt2),  
-            "deviceStatus": "lightgreen"}#random.choice(["red", "lightgreen"])}
+            "buttonStatus": random.choice(["red", "lightgreen"]),
+            "sensorTemp": random.randint(20,30),
+            "sensorHum": random.randint(40,60),}
         
         send_message(payload, api__status_url)
         time.sleep(0.1)
 
-randomDevicesWithStatus(4)
-# randomStatus(60)
+def testStatus():
+    time.sleep(5)
+    for n in range(4):
+        payload={
+            "deviceID": "IC" + str(3),
+            "buttonID": str(n+1),  
+            "buttonStatus": "red",
+            "sensorTemp": 22,
+            "sensorHum": 40}
+        
+        send_message(payload, api__status_url)
+        time.sleep(3)
+
+# randomDevicesWithStatus(4)
+# randomStatus(600)
+testStatus()

@@ -280,7 +280,7 @@ body {
 }
 
 .application {
-  background-color: #F3F4F6;
+  background-color: #fff;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow style */
     margin: 20px; /* Add margin for spacing */
     height: 50vh; /* Fixed height for the .application div */
